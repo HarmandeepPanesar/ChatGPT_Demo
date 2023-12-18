@@ -1,0 +1,14 @@
+﻿@page "/"
+@namespace ChatGPT_Demo.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<component type="typeof(App)" render-mode="ServerPrerendered" />
+<script>
+    window.ScrollToBottom = (elementName) => {
+        element = document.getElementById(elementName);
+        element.scrollTop = element.scrollHeight - element.clientHeight;
+    }
+</script>
